@@ -12,12 +12,12 @@ from msrest import Serializer, Deserializer
 from azure.storage import CloudStorageAccount
 from azure.storage.blob.blockblobservice import BlockBlobService
 from azure.batch.batch_auth import SharedKeyCredentials
-import azure.batch_extensions as batch
-from azure.batch_extensions import models
-from azure.batch_extensions import operations
-from azure.batch_extensions import _template_utils as utils
-from azure.batch_extensions import _pool_utils as pool_utils
-from azure.batch_extensions import _file_utils as file_utils
+import azure_ext.batch as batch
+from azure_ext.batch import models
+from azure_ext.batch import operations
+from azure_ext.batch import _template_utils as utils
+from azure_ext.batch import _pool_utils as pool_utils
+from azure_ext.batch import _file_utils as file_utils
 
 
 

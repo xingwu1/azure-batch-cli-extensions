@@ -7,7 +7,7 @@
 
 import os
 from codecs import open
-from setuptools import setup
+from setuptools import setup, find_packages
 
 VERSION = '1.0.0'
 
@@ -27,19 +27,7 @@ CLASSIFIERS = [
     'License :: OSI Approved :: MIT License',
 ]
 
-DEPENDENCIES = [
-    'msrestazure>=0.4.11,<1',
-    'azure-batch>=3.1,<4',
-    'azure-mgmt-batch>=4.0,<5',
-    'azure-cli-core',
-    'azure-cli-batch',
-    'azure-storage>=0.34,<0.35',
-    'azure-mgmt-storage>=1.0,<2',
-    'azure-batch-extensions>=0.2,<1'
-]
-DEPENDENCIES_27 = {
-    ":python_version<'3.4'": ['pathlib>=1.0.1']
-}
+DEPENDENCIES = []
 
 with open('README.rst', 'r', encoding='utf-8') as f:
     README = f.read()
@@ -56,14 +44,6 @@ setup(
     author_email='askwabatch@microsoft.com',
     url='https://github.com/Azure/azure-batch-cli-extensions',
     classifiers=CLASSIFIERS,
-    namespace_packages=[
-        'azure',
-        'azure.cli',
-        'azure.cli.command_modules'
-    ],
-    packages=[
-        'azure.cli.command_modules.batch_extensions'
-    ],
-    install_requires=DEPENDENCIES,
-    extras_require=DEPENDENCIES_27,
+    packages=find_packages(),
+    install_requires=DEPENDENCIES
 )

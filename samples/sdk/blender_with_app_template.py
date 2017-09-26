@@ -7,8 +7,8 @@ import os
 import json
 import time
 
-import azure.batch_extensions as batch
-from azure.batch_extensions import models
+import azure_ext.batch as batch
+from azure_ext.batch import models
 from azure.common.credentials import ServicePrincipalCredentials
 
 
